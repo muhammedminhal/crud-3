@@ -1,0 +1,28 @@
+
+
+<h1>
+{{title}}</h1>
+<table class="table table-striped">
+     <thead>
+    <tr>
+        <th>NAme</th>
+        <th>Age</th>
+        <th>place</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        
+    </tr>
+    </thead>
+    <tbody >
+    {{#each data}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td >{{this.age}}</td>
+        <td>{{this.place}}</td>
+        <td><a href="/user/edit/{{this.id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a></td>
+          <td><a href="/user/delete/{{this.id}}"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></td>
+    {{/each}}
+    </tbody>
+    <a href="/"><button class="btn btn-primary">Home</a></button>
+</table>
+</div>
